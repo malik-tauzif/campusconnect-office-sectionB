@@ -12,5 +12,5 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY", "").strip()
 if not SUPABASE_URL or not SUPABASE_KEY:
     raise RuntimeError("Missing SUPABASE_URL or SUPABASE_KEY in backend/.env")
 
-# One shared connection that the rest of the backend imports
+# One shared connec tion that the rest of the backend imports
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
